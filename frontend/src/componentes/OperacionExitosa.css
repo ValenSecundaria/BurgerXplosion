@@ -1,0 +1,37 @@
+
+.alerta-exit {
+    position: fixed;
+    top: -60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #03c413;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    z-index: 9999;
+    animation: slideInOut 3s ease-in-out forwards;
+    white-space: nowrap;
+    z-index: 99999;
+  }
+  
+  @keyframes slideInOut {
+    0% {
+      top: -60px;
+      opacity: 0;
+    }
+    10% {
+      top: 20px;
+      opacity: 1;
+    }
+    90% {
+      top: 20px;
+      opacity: 1;
+    }
+    100% {
+      top: -60px;
+      opacity: 0;
+    }
+  }
+  

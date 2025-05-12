@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.imagen-left-top, .imagen-right-top, .imagen-left-bottom, .imagen-right-bottom {
+    position: absolute;
+    max-width: 500px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.imagen-left-top {
+    top: -100px;
+    left: -100px;
+    transform: rotateZ(45deg);
+    animation: mover-left-top 1200s linear infinite;
+}
+
+.imagen-right-top {
+    top: -100px;
+    right: -100px;
+    transform: rotateZ(320deg);
+    animation: mover-right-top 1200s linear infinite;
+}
+
+.imagen-left-bottom {
+    bottom: -100px;
+    left: -90px;
+    transform: rotateZ(-45deg);
+    animation: mover-left-bottom 1200s linear infinite;
+}
+
+.imagen-right-bottom {
+    bottom: -110px;
+    right: -90px;
+    transform: rotateZ(0deg);
+    animation: mover-right-bottom 1200s linear infinite;
+}
+
+@keyframes mover-left-top {
+    0% { transform: translateX(0) rotateZ(45deg); }
+    100% { transform: translateX(200vw) rotateZ(45deg); }
+}
+
+@keyframes mover-right-top {
+    0% { transform: translateX(0) rotateZ(320deg); }
+    100% { transform: translateX(200vw) rotateZ(320deg); }
+}
+
+@keyframes mover-left-bottom {
+    0% { transform: translateX(0) rotateZ(-45deg); }
+    100% { transform: translateX(200vw) rotateZ(-45deg); }
+}
+
+@keyframes mover-right-bottom {
+    0% { transform: translateX(0) rotateZ(0deg); }
+    100% { transform: translateX(200vw) rotateZ(0deg); }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 1200px) {
+    .fondo {
+        /* Se asegura que el fondo no se mueva en dispositivos móviles */
+        background-color: #fff;
+    }
+
+    .imagen-left-top, .imagen-right-top, .imagen-left-bottom, .imagen-right-bottom {
+        animation: none; /* Detiene la animación en móviles */
+    }
+}
+
+@media (max-width: 1100px) {
+    .imagen-left-top, .imagen-right-top, .imagen-left-bottom, .imagen-right-bottom {
+        max-width: 300px;
+    }
+}
