@@ -43,7 +43,7 @@ function MostrarDatos({ pedido , onVolver}) {
         <h2>Detalles del Pedido #{pedido.id}</h2>
         
         <div className="datos-contenido">
-          {/* Sección de datos del cliente */}
+          
           <div className="seccion-datos">
             <h3>Datos del Cliente</h3>
             <div className="dato-item">
@@ -64,14 +64,14 @@ function MostrarDatos({ pedido , onVolver}) {
             </div>
           </div>
 
-          {/* Sección de hamburguesas */}
+          
           <div className="seccion-datos">
             <h3>Hamburguesas</h3>
             {pedido.hamburguesa && pedido.hamburguesa.length > 0 ? (
               <ul className="lista-productos">
                 {pedido.hamburguesa.map((hamburguesa, index) => (
                   <li key={index}>
-                    {hamburguesa.nombre} - Cantidad: {hamburguesa.cantidad || pedido.cantidadHamburguesas || 10}
+                    {hamburguesa.nombre} - Cantidad: {hamburguesa.cantidad}
                   </li>
                 ))}
               </ul>
@@ -80,14 +80,14 @@ function MostrarDatos({ pedido , onVolver}) {
             )}
           </div>
 
-          {/* Sección de papas */}
+          
           <div className="seccion-datos">
             <h3>Papas</h3>
             {pedido.papas && pedido.papas.length > 0 ? (
               <ul className="lista-productos">
                 {pedido.papas.map((papa, index) => (
                   <li key={index}>
-                    {papa.nombre} - Cantidad: {papa.cantidad || pedido.cantidadPapas || 1}
+                    {papa.nombre} - Cantidad: {papa.cantidad}
                   </li>
                 ))}
               </ul>
@@ -96,14 +96,13 @@ function MostrarDatos({ pedido , onVolver}) {
             )}
           </div>
 
-          {/* Sección de bebidas */}
           <div className="seccion-datos">
             <h3>Bebidas</h3>
             { pedido.bebida.length > 0 ? (
               <ul className="lista-productos">
                 {pedido.bebida.map((bebida, index) => (
                   <li key={index}>
-                    {bebida.nombre} - Cantidad: {bebida.cantidad || pedido.cantidadBebidas || 1}
+                    {bebida.nombre} - Cantidad: {bebida.cantidad}
                   </li>
                 ))}
               </ul>
