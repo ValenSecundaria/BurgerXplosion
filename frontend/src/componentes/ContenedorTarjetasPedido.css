@@ -34,7 +34,7 @@
     position: relative;
 }
 
-/* MENSAJE VACÍO */
+
 .mensaje-vacio {
     position: absolute;
     top: 50%;
@@ -68,7 +68,6 @@
     color: #7f8c8d;
 }
 
-/* Estilos para móviles */
 @media (max-width: 600px) {
     .mensaje-vacio {
         font-size: 5vw;
@@ -82,17 +81,15 @@
     .contenedor-pedidos {
         border-radius: 30px !important;
         scroll-behavior: smooth;
-        /* Opcional: ocultar el scrollbar si no quieres que se vea nada en móviles */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none; 
+        -ms-overflow-style: none;  
     }
 
     .contenedor-pedidos::-webkit-scrollbar {
-        display: none; /* Chrome, Safari y Opera */
+        display: none; 
     }
 }
 
-/* Media Queries para grid responsivo */
 @media (max-width: 1100px) {
 
     .contenedor-tarjetas-pedido {
@@ -125,7 +122,6 @@
     }
 }
 
-/* Scroll personalizado solo para tablets y computadoras (mayor a 600px) */
 @media (min-width: 601px) {
     .contenedor-pedidos::-webkit-scrollbar {
         width: 10px;

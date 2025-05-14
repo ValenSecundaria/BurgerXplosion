@@ -73,15 +73,14 @@
     100% { transform: translateX(200vw) rotateZ(0deg); }
 }
 
-/* Media Query para dispositivos móviles */
+
 @media (max-width: 1200px) {
     .fondo {
-        /* Se asegura que el fondo no se mueva en dispositivos móviles */
         background-color: #fff;
     }
 
     .imagen-left-top, .imagen-right-top, .imagen-left-bottom, .imagen-right-bottom {
-        animation: none; /* Detiene la animación en móviles */
+        animation: none; 
     }
 }
 
