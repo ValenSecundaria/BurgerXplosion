@@ -8,7 +8,7 @@ function Contenedor_de_pedido({pedido, estaSeleccionado, onSeleccionar}) {
 
     const obtener_pedidos = async () => {
       try {
-        const response = await fetch('/api/pedidos/obtenerPedido', {
+        const response = await fetch('https://burgerxplosion.onrender.com/api/pedidos/obtenerPedido', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

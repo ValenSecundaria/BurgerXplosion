@@ -102,7 +102,7 @@ function App() {
     };
 
     try {
-      const response = await fetch(`/api/pedidos/ver/${pedidoSeleccionado[0]}`, {
+      const response = await fetch(`https://burgerxplosion.onrender.com/api/pedidos/ver/${pedidoSeleccionado[0]}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ function App() {
   
       const obtener_pedidos = async () => {
         try {
-          const response = await fetch('/api/pedidos/obtenerPedido', {
+          const response = await fetch('https://burgerxplosion.onrender.com/api/pedidos/obtenerPedido', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -159,7 +159,7 @@ function App() {
       const interval = setInterval(() => {
         const obtener_pedidos = async () => {
           try {
-            const response = await fetch('/api/pedidos/obtenerPedido', {
+            const response = await fetch('https://burgerxplosion.onrender.com/api/pedidos/obtenerPedido', {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',

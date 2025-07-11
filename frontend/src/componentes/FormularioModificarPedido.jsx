@@ -51,7 +51,7 @@ function FormularioModificarPedido({pedidoAEditar, cerrarFormularioModificar, on
           id: pedido.id
         };
           try{
-            const response = await fetch(`/api/pedidos/modificar/${pedido.id}`,{
+            const response = await fetch(`https://burgerxplosion.onrender.com/api/pedidos/modificar/${pedido.id}`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

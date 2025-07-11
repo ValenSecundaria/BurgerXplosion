@@ -53,7 +53,7 @@ function FormularioPedidoNuevo({ cerrarFormularioNuevo, onSubmit, mostrarAlerta,
     console.log(nuevoPedido);
 
     try {
-      const response = await fetch('/api/pedidos/crearPedido', {
+      const response = await fetch('https://burgerxplosion.onrender.com/api/pedidos/crearPedido', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(nuevoPedido),
@@ -73,7 +73,7 @@ function FormularioPedidoNuevo({ cerrarFormularioNuevo, onSubmit, mostrarAlerta,
   useEffect(() => {
     const traerOpciones = async () => {
       try {
-        const response = await fetch('/api/opciones');
+        const response = await fetch('https://burgerxplosion.onrender.com/api/opciones');
         if (response.ok) {
           const data = await response.json();
           setOpciones(data);
